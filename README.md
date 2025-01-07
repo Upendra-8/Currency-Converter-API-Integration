@@ -90,7 +90,7 @@ You can use Postman to interact with the API.
 
     - amount (float): The amount to convert.
 
-  **Example Request in Postman:**
+**Example Request in Postman:**
 
     1. Open Postman and create a new POST request.
     
@@ -136,10 +136,15 @@ You can use Postman to interact with the API.
 We welcome contributions to improve the project. To contribute:
 
 1. Fork the repository.
+
 2. Create a new branch (git checkout -b feature-branch).
+
 3. Make your changes.
+
 4. Commit your changes (git commit -am 'Add new feature').
+
 5. Push your branch (git push origin feature-branch).
+
 6. Open a Pull Request.
    
 ## Acknowledgments
