@@ -4,6 +4,7 @@ Welcome to the Currency Converter API! This Django REST Framework (DRF) applicat
 
 ## Features
 Fetch Exchange Rates: Retrieve real-time exchange rates for a given base currency (default: USD).
+
 Currency Conversion: Convert a specified amount from one currency to another.
 ## Installation
 ## Prerequisites
