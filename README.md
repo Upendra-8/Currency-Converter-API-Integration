@@ -43,13 +43,21 @@ You can use Postman to interact with the API.
 
 **1. Fetch Exchange Rates**
 Endpoint: GET /api/rates
+
 Method: GET
+
 Query Parameters:
+
 base (optional): The base currency code (e.g., USD, EUR). Defaults to USD.
+
 Example Request in Postman:
+
 Open Postman and create a new GET request.
+
 Enter the URL: http://127.0.0.1:8000/api/rates?base=EUR
+
 Click Send.
+
 Example Response:
 
 {
@@ -60,15 +68,25 @@ Example Response:
 }
 **2. Convert Currency**
 Endpoint: POST /api/convert
+
 Method: POST
+
 Body:
+
 from (string): The source currency code (e.g., USD).
+
 to (string): The target currency code (e.g., EUR).
+
 amount (float): The amount to convert.
+
 Example Request in Postman:
+
 Open Postman and create a new POST request.
+
 Enter the URL: http://127.0.0.1:8000/api/convert
+
 Go to the Body tab and select raw and choose JSON from the dropdown.
+
 Enter the following JSON in the body:
 
 {
@@ -76,7 +94,9 @@ Enter the following JSON in the body:
     "to": "EUR",
     "amount": 100
 }
+
 Click Send.
+
 Example Response:
 
 {
