@@ -1,0 +1,80 @@
+This document can be used as a reference for consumers of API to understand its endpoints, input parameters, and responses.
+
+Currency Converter API Documentation
+
+Base URL:
+http://localhost:8000/api/
+
+1. Convert Currency (POST /convert/)
+
+Description:
+This endpoint converts an amount from one currency to another.
+
+Request:
+    Method: POST
+    Endpoint: /convert/
+
+Request Body (JSON):
+
+{
+  "from_currency": "USD",
+  "to_currency": "EUR",
+  "amount": 100
+}
+
+from_currency (string): The currency you are converting from (e.g., "USD").
+to_currency (string): The currency you are converting to (e.g., "EUR").
+amount (float): The amount you want to convert (e.g., 100).
+
+Response:
+    Success (HTTP 200)
+
+{
+  "from_currency": "USD",
+  "to_currency": "EUR",
+  "amount": 100,
+  "convertedAmount": 85
+}
+
+Error (HTTP 400)
+If any required fields are missing:
+
+{
+  "error": "Missing required fields"
+}
+
+Possible Errors:
+400 Bad Request: If the from_currency, to_currency, or amount fields are missing. If the specified currency code is invalid.
+
+2. Get Exchange Rates (GET /rates/)
+
+Description:
+This endpoint provides the exchange rates for supported currencies.
+
+Request:
+    Method: GET
+    Endpoint: /rates/
+
+Response:
+    Success (HTTP 200)
+
+{
+  "USD": 1.0,
+  "EUR": 0.85,
+  "GBP": 0.75
+}
+
+This response includes a list of supported currencies along with their exchange rates relative to USD.
+
+Error (HTTP 500):
+If there is an internal server issue, the response might look like:
+
+{
+  "error": "Unable to fetch exchange rates at the moment"
+}
+
+Possible Errors:
+    500 Internal Server Error: If there is an issue fetching exchange rates from the data provider.
+
+Authentication:
+    This API does not require authentication for the public use cases described above. 
