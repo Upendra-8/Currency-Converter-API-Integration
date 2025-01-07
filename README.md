@@ -10,8 +10,11 @@ Currency Conversion: Convert a specified amount from one currency to another.
 Ensure you have the following installed:
 
 Python 3.x
+
 Django 3.x or higher
+
 Django REST Framework (DRF)
+
 An active internet connection (for fetching exchange rates).
 ## Setup
 1. Clone the Repository
