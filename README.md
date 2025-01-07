@@ -23,11 +23,14 @@ Ensure you have the following installed:
 1. Clone the Repository
 git clone https://github.com/yourusername/Currency-Converter-API-Integration
 cd currency-converter
+
 2. Create and Activate a Virtual Environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+
 3. Install Dependencies
 pip install -r requirements.txt
+
 4. Apply Database Migrations
 python manage.py migrate
 
@@ -54,11 +57,11 @@ You can use Postman to interact with the API.
 
 **Example Request in Postman:**
 
-1. Open Postman and create a new GET request.
-
-2. Enter the URL: http://127.0.0.1:8000/api/rates?base=EUR
-
-3. Click Send.
+    1. Open Postman and create a new GET request.
+    
+    2. Enter the URL: http://127.0.0.1:8000/api/rates?base=EUR
+    
+    3. Click Send.
 
 **Example Response:**
 
@@ -89,13 +92,13 @@ You can use Postman to interact with the API.
 
   **Example Request in Postman:**
 
-1. Open Postman and create a new POST request.
-
-2. Enter the URL: http://127.0.0.1:8000/api/convert
-
-3. Go to the Body tab and select raw and choose JSON from the dropdown.
-
-4. Enter the following JSON in the body:
+    1. Open Postman and create a new POST request.
+    
+    2. Enter the URL: http://127.0.0.1:8000/api/convert
+    
+    3. Go to the Body tab and select raw and choose JSON from the dropdown.
+    
+    4. Enter the following JSON in the body:
 
 {
 
@@ -107,7 +110,7 @@ You can use Postman to interact with the API.
 
 }
 
-5. Click Send.
+    5. Click Send.
 
 **Example Response:**
 
@@ -126,6 +129,7 @@ You can use Postman to interact with the API.
 ## URL Patterns
 
 - /api/rates: Fetch exchange rates for a base currency.
+  
 - /api/convert: Convert a specified amount from one currency to another.
 ## Contributing
 
